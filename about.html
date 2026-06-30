@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohaimin Hossain Srabon | About Me</title>
+    
+    <!-- SEO Optimization -->
+    <meta name="description" content="Learn more about Mohaimin Hossain Srabon, a professional Front-End Developer dedicated to crafting interactive, beautiful, and responsive web applications.">
+    <meta name="keywords" content="About Mohaimin Hossain Srabon, Front-End Developer, Web Developer, Portfolio, React Developer">
+    <meta name="author" content="Mohaimin Hossain Srabon">
+    
+    <!-- Fonts (Poppins & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="custom-cursor-follower" id="customCursorFollower"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader-screen" id="loaderScreen">
+        <div class="loader-content">
+            <span class="loader-logo">Srabon's Portfolio</span>
+            <div class="loader-bar-bg">
+                <div class="loader-bar" id="loaderBar"></div>
+            </div>
+            <span class="loader-text">Loading About Me...</span>
+        </div>
+    </div>
+
+    <!-- Floating Background Canvas & Shapes -->
+    <div class="background-decorations">
+        <canvas id="particle-canvas"></canvas>
+        <div class="glow-follow" id="glowFollow"></div>
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                Srabon's <span>Portfolio</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link" data-page="home">Home</a>
+                <a href="about.html" class="nav-link active" data-page="about">About</a>
+                <a href="skills.html" class="nav-link" data-page="skills">Skills</a>
+                <a href="services.html" class="nav-link" data-page="services">Services</a>
+                <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
+                <a href="experience.html" class="nav-link" data-page="experience">Experience</a>
+                <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <!-- Theme Switcher -->
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                
+                <!-- Navbar CTA Button -->
+                <a href="contact.html" class="btn-primary nav-cta-btn">Hire Me</a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open mobile menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Me Section -->
+        <section class="about-sec section-padding" id="about">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="sub-title">Who I Am</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-info-column reveal">
+                        <h3 class="about-subheading">I create tailored web experiences that engage users.</h3>
+                        <p class="about-text">
+                            I'm Mohaimin Hossain Srabon, a passionate Front-End Developer who enjoys creating beautiful, responsive, and user-friendly websites. My goal is to build high-quality digital experiences using modern technologies and clean coding practices.
+                        </p>
+                        <p class="about-text">
+                            Every pixel counts. I merge creativity with performance to deliver websites that not only look phenomenal but load fast and rank well. I keep myself updated with modern development methodologies and performance tools to craft robust client products.
+                        </p>
+                        <div class="about-buttons">
+                            <a href="contact.html" class="btn-primary">Let's Talk</a>
+                        </div>
+                    </div>
+                    
+                    <div class="about-stats-column reveal">
+                        <div class="stats-grid">
+                            <div class="stat-card glass-card tilt-element">
+                                <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+                                <h3 class="stat-number" data-target="3">3+</h3>
+                                <p class="stat-title">Years Experience</p>
+                            </div>
+                            <div class="stat-card glass-card tilt-element">
+                                <div class="stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                <h3 class="stat-number" data-target="50">50+</h3>
+                                <p class="stat-title">Projects Completed</p>
+                            </div>
+                            <div class="stat-card glass-card tilt-element">
+                                <div class="stat-icon"><i class="fa-solid fa-smile-beam"></i></div>
+                                <h3 class="stat-number" data-target="30">30+</h3>
+                                <p class="stat-title">Happy Clients</p>
+                            </div>
+                            <div class="stat-card glass-card tilt-element">
+                                <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+                                <h3 class="stat-number" data-target="100">100%</h3>
+                                <p class="stat-title">Satisfaction Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-sec">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">Srabon's <span>Portfolio</span></a>
+                <p class="footer-desc">Building futuristic, high-performance web applications with modern design frameworks.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links-group">
+                <h4 class="footer-links-title">Quick Links</h4>
+                <ul class="footer-links-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-group">
+                <h4 class="footer-links-title">Services</h4>
+                <ul class="footer-links-list">
+                    <li><a href="services.html">Responsive Web Design</a></li>
+                    <li><a href="services.html">React Development</a></li>
+                    <li><a href="services.html">Landing Page Design</a></li>
+                    <li><a href="services.html">Dashboard UI</a></li>
+                    <li><a href="services.html">Performance Optimization</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <div class="container copyright-container">
+                <p>&copy; 2026 Mohaimin Hossain Srabon. All Rights Reserved.</p>
+                <p class="attribution">Designed & Developed with <i class="fa-solid fa-heart text-gradient"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Main javascript file -->
+    <script src="script.js"></script>
+</body>
+</html>

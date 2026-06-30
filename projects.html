@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohaimin Hossain Srabon | Projects</title>
+    
+    <!-- SEO Optimization -->
+    <meta name="description" content="Browse the web development project portfolio of Mohaimin Hossain Srabon, showcasing Next.js, React, and Tailwind CSS applications.">
+    <meta name="keywords" content="Portfolio, Web Projects, React, Next.js, E-Commerce, Kanban Board, Cryptocurrency tracker">
+    <meta name="author" content="Mohaimin Hossain Srabon">
+    
+    <!-- Fonts (Poppins & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="custom-cursor-follower" id="customCursorFollower"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader-screen" id="loaderScreen">
+        <div class="loader-content">
+            <span class="loader-logo">Srabon's Portfolio</span>
+            <div class="loader-bar-bg">
+                <div class="loader-bar" id="loaderBar"></div>
+            </div>
+            <span class="loader-text">Loading Projects & Testimonials...</span>
+        </div>
+    </div>
+
+    <!-- Floating Background Canvas & Shapes -->
+    <div class="background-decorations">
+        <canvas id="particle-canvas"></canvas>
+        <div class="glow-follow" id="glowFollow"></div>
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                Srabon's <span>Portfolio</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link" data-page="home">Home</a>
+                <a href="about.html" class="nav-link" data-page="about">About</a>
+                <a href="skills.html" class="nav-link" data-page="skills">Skills</a>
+                <a href="services.html" class="nav-link" data-page="services">Services</a>
+                <a href="projects.html" class="nav-link active" data-page="projects">Projects</a>
+                <a href="experience.html" class="nav-link" data-page="experience">Experience</a>
+                <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <!-- Theme Switcher -->
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                
+                <!-- Navbar CTA Button -->
+                <a href="contact.html" class="btn-primary nav-cta-btn">Hire Me</a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open mobile menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Featured Projects Section -->
+        <section class="projects-sec section-padding" id="projects">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="sub-title">Portfolio</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card tilt-element reveal">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project1.jpg" alt="DevFlow App" class="project-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-circle" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="btn-circle" aria-label="GitHub Code"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">DevFlow Q&A Platform</h3>
+                            <p class="project-desc">A developer community Q&A forum with modern searching, voting, tags, dynamic user views, and responsive profiles.</p>
+                            <div class="project-tech-badges">
+                                <span class="tech-badge">Next.js</span>
+                                <span class="tech-badge">TypeScript</span>
+                                <span class="tech-badge">Tailwind CSS</span>
+                                <span class="tech-badge">MongoDB</span>
+                            </div>
+                            <div class="project-links-mobile">
+                                <a href="#" class="btn-link">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="btn-link">GitHub <i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card tilt-element reveal">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project2.jpg" alt="CryptoSphere" class="project-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-circle" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="btn-circle" aria-label="GitHub Code"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">CryptoSphere Hub</h3>
+                            <p class="project-desc">Real-time cryptocurrency monitoring terminal with graphic trends, market capital comparisons, and instant historical tables.</p>
+                            <div class="project-tech-badges">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Chart.js</span>
+                                <span class="tech-badge">Tailwind</span>
+                                <span class="tech-badge">CoinGecko API</span>
+                            </div>
+                            <div class="project-links-mobile">
+                                <a href="#" class="btn-link">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="btn-link">GitHub <i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card tilt-element reveal">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project3.jpg" alt="Promptopia" class="project-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-circle" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="btn-circle" aria-label="GitHub Code"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Promptopia Marketplace</h3>
+                            <p class="project-desc">An interactive hub to discover, edit, and share high-quality prompts for generative artificial intelligence LLMs.</p>
+                            <div class="project-tech-badges">
+                                <span class="tech-badge">Next.js</span>
+                                <span class="tech-badge">MongoDB</span>
+                                <span class="tech-badge">NextAuth</span>
+                                <span class="tech-badge">CSS Modules</span>
+                            </div>
+                            <div class="project-links-mobile">
+                                <a href="#" class="btn-link">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="btn-link">GitHub <i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card glass-card tilt-element reveal">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project4.jpg" alt="ThreadCraft" class="project-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-circle" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="btn-circle" aria-label="GitHub Code"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">ThreadCraft Chat Application</h3>
+                            <p class="project-desc">A premium social messaging web client featuring active user tabs, real-time message streams, and typing cues.</p>
+                            <div class="project-tech-badges">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Socket.io</span>
+                                <span class="tech-badge">Tailwind CSS</span>
+                            </div>
+                            <div class="project-links-mobile">
+                                <a href="#" class="btn-link">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="btn-link">GitHub <i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card glass-card tilt-element reveal">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project5.jpg" alt="ShopVerse" class="project-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-circle" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="btn-circle" aria-label="GitHub Code"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">ShopVerse E-Commerce</h3>
+                            <p class="project-desc">Premium dark-themed fashion clothing marketplace showcasing glassmorphism product grids and responsive shopping carts.</p>
+                            <div class="project-tech-badges">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Redux Toolkit</span>
+                                <span class="tech-badge">Express</span>
+                                <span class="tech-badge">Stripe Payment</span>
+                            </div>
+                            <div class="project-links-mobile">
+                                <a href="#" class="btn-link">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="btn-link">GitHub <i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card glass-card tilt-element reveal">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project6.jpg" alt="Taskify" class="project-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-circle" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="btn-circle" aria-label="GitHub Code"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Taskify Kanban Organizer</h3>
+                            <p class="project-desc">Elegant workspace scheduling board utilizing smooth drag-and-drop actions, labels, lists, and persistence configurations.</p>
+                            <div class="project-tech-badges">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Beautiful DnD</span>
+                                <span class="tech-badge">Tailwind CSS</span>
+                                <span class="tech-badge">LocalStorage</span>
+                            </div>
+                            <div class="project-links-mobile">
+                                <a href="#" class="btn-link">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="btn-link">GitHub <i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-sec section-padding" id="testimonials">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="sub-title">Recommendations</span>
+                    <h2 class="section-title">What Clients Say</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="testimonials-slider-container reveal">
+                    <div class="testimonials-slider" id="testimonialSlider">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide active">
+                            <div class="testimonial-card glass-card">
+                                <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                                <p class="testimonial-text">"Mohaimin Hossain Srabon built our portfolio portal, and we couldn't be happier. The dynamic animations, responsive views, and overall dark-theme aesthetic are exactly what we hoped for. His clean React code and speed made implementation effortless!"</p>
+                                <div class="client-info">
+                                    <div class="client-avatar">
+                                        <svg viewBox="0 0 100 100" class="avatar-svg">
+                                            <defs>
+                                                <linearGradient id="avatarGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" stop-color="#3B82F6"/>
+                                                    <stop offset="100%" stop-color="#8B5CF6"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <circle cx="50" cy="50" r="50" fill="url(#avatarGrad1)"/>
+                                            <circle cx="50" cy="40" r="20" fill="#ffffff"/>
+                                            <path d="M20,80 Q50,60 80,80 Z" fill="#ffffff"/>
+                                        </svg>
+                                    </div>
+                                    <div class="client-details">
+                                        <h4 class="client-name">Kazi Nafis</h4>
+                                        <span class="client-role">Founder, TechSpace Ltd.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card glass-card">
+                                <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                                <p class="testimonial-text">"Srabon's attention to detail during the redesign of our platform dashboard was outstanding. He introduced premium elements, resolved layout responsive bugs, and increased browser load speeds by 40%. A highly motivated frontend specialist!"</p>
+                                <div class="client-info">
+                                    <div class="client-avatar">
+                                        <svg viewBox="0 0 100 100" class="avatar-svg">
+                                            <defs>
+                                                <linearGradient id="avatarGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" stop-color="#8B5CF6"/>
+                                                    <stop offset="100%" stop-color="#06B6D4"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <circle cx="50" cy="50" r="50" fill="url(#avatarGrad2)"/>
+                                            <circle cx="50" cy="40" r="20" fill="#ffffff"/>
+                                            <path d="M20,80 Q50,60 80,80 Z" fill="#ffffff"/>
+                                        </svg>
+                                    </div>
+                                    <div class="client-details">
+                                        <h4 class="client-name">Sarah Jenkins</h4>
+                                        <span class="client-role">Lead Product Manager, Cryptic Inc.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card glass-card">
+                                <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                                <p class="testimonial-text">"Outstanding landing page design! The custom typography, dark neumorphism card effects, and mouse parallax features truly amazed our customers. Srabon is professional, responsive, and delivers top-tier frontend solutions."</p>
+                                <div class="client-info">
+                                    <div class="client-avatar">
+                                        <svg viewBox="0 0 100 100" class="avatar-svg">
+                                            <defs>
+                                                <linearGradient id="avatarGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" stop-color="#06B6D4"/>
+                                                    <stop offset="100%" stop-color="#3B82F6"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <circle cx="50" cy="50" r="50" fill="url(#avatarGrad3)"/>
+                                            <circle cx="50" cy="40" r="20" fill="#ffffff"/>
+                                            <path d="M20,80 Q50,60 80,80 Z" fill="#ffffff"/>
+                                        </svg>
+                                    </div>
+                                    <div class="client-details">
+                                        <h4 class="client-name">David Warner</h4>
+                                        <span class="client-role">Creative Director, Apex Agency</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slider Dots -->
+                    <div class="slider-dots" id="sliderDots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-sec">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">Srabon's <span>Portfolio</span></a>
+                <p class="footer-desc">Building futuristic, high-performance web applications with modern design frameworks.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links-group">
+                <h4 class="footer-links-title">Quick Links</h4>
+                <ul class="footer-links-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-group">
+                <h4 class="footer-links-title">Services</h4>
+                <ul class="footer-links-list">
+                    <li><a href="services.html">Responsive Web Design</a></li>
+                    <li><a href="services.html">React Development</a></li>
+                    <li><a href="services.html">Landing Page Design</a></li>
+                    <li><a href="services.html">Dashboard UI</a></li>
+                    <li><a href="services.html">Performance Optimization</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <div class="container copyright-container">
+                <p>&copy; 2026 Mohaimin Hossain Srabon. All Rights Reserved.</p>
+                <p class="attribution">Designed & Developed with <i class="fa-solid fa-heart text-gradient"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Main javascript file -->
+    <script src="script.js"></script>
+</body>
+</html>

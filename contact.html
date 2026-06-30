@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohaimin Hossain Srabon | Contact Me</title>
+    
+    <!-- SEO Optimization -->
+    <meta name="description" content="Get in touch with Mohaimin Hossain Srabon for frontend development partnerships, freelance contracts, or consultations.">
+    <meta name="keywords" content="Contact, Email, Phone, Map, Form, Hire Developer, Bangladesh">
+    <meta name="author" content="Mohaimin Hossain Srabon">
+    
+    <!-- Fonts (Poppins & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="custom-cursor-follower" id="customCursorFollower"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader-screen" id="loaderScreen">
+        <div class="loader-content">
+            <span class="loader-logo">Srabon's Portfolio</span>
+            <div class="loader-bar-bg">
+                <div class="loader-bar" id="loaderBar"></div>
+            </div>
+            <span class="loader-text">Loading Contact Page...</span>
+        </div>
+    </div>
+
+    <!-- Floating Background Canvas & Shapes -->
+    <div class="background-decorations">
+        <canvas id="particle-canvas"></canvas>
+        <div class="glow-follow" id="glowFollow"></div>
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                Srabon's <span>Portfolio</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link" data-page="home">Home</a>
+                <a href="about.html" class="nav-link" data-page="about">About</a>
+                <a href="skills.html" class="nav-link" data-page="skills">Skills</a>
+                <a href="services.html" class="nav-link" data-page="services">Services</a>
+                <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
+                <a href="experience.html" class="nav-link" data-page="experience">Experience</a>
+                <a href="contact.html" class="nav-link active" data-page="contact">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <!-- Theme Switcher -->
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                
+                <!-- Navbar CTA Button -->
+                <a href="contact.html" class="btn-primary nav-cta-btn">Hire Me</a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open mobile menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Section -->
+        <section class="contact-sec section-padding" id="contact">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="sub-title">Get In Touch</span>
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info-column reveal">
+                        <h3 class="contact-subheading">Let's discuss your project!</h3>
+                        <p class="contact-desc-text">Fill out the form or reach out through my contact coordinates. I usually respond within 12 hours.</p>
+                        
+                        <div class="contact-details-cards">
+                            <div class="contact-detail-card glass-card">
+                                <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Email Me</span>
+                                    <a href="mailto:mohaiminhossainsrabon0@gmail.com" class="detail-value">mohaiminhossainsrabon0@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-card glass-card">
+                                <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Call Me</span>
+                                    <a href="tel:+8801873434639" class="detail-value">+880 1873-434639</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-card glass-card">
+                                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Dhaka, Bangladesh</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Premium Embedded Google Map -->
+                        <div class="google-map-wrapper glass-card">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d233668.38703692606!2d90.27923991039642!3d23.780887456731998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa5020dd7b8398f!2sDhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" 
+                                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Google Map of Dhaka, Bangladesh"></iframe>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form-column reveal">
+                        <form id="contactForm" class="contact-form glass-card" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-user input-icon"></i>
+                                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                    </div>
+                                    <span class="error-msg" id="nameError">Name is required</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Your Email</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-envelope input-icon"></i>
+                                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                    </div>
+                                    <span class="error-msg" id="emailError">Please enter a valid email address</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-pen-nib input-icon"></i>
+                                        <input type="text" id="subject" name="subject" placeholder="Project Discussion" required>
+                                    </div>
+                                    <span class="error-msg" id="subjectError">Subject is required</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-comment input-icon textarea-icon"></i>
+                                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project detail..." required></textarea>
+                                    </div>
+                                    <span class="error-msg" id="messageError">Message is required</span>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary form-submit-btn" id="submitBtn">
+                                <span class="btn-text">Send Message</span>
+                                <i class="fa-solid fa-paper-plane icon-right"></i>
+                            </button>
+                            
+                            <!-- Form Success / Error Box -->
+                            <div class="form-status" id="formStatus"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-sec">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">Srabon's <span>Portfolio</span></a>
+                <p class="footer-desc">Building futuristic, high-performance web applications with modern design frameworks.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links-group">
+                <h4 class="footer-links-title">Quick Links</h4>
+                <ul class="footer-links-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-group">
+                <h4 class="footer-links-title">Services</h4>
+                <ul class="footer-links-list">
+                    <li><a href="services.html">Responsive Web Design</a></li>
+                    <li><a href="services.html">React Development</a></li>
+                    <li><a href="services.html">Landing Page Design</a></li>
+                    <li><a href="services.html">Dashboard UI</a></li>
+                    <li><a href="services.html">Performance Optimization</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <div class="container copyright-container">
+                <p>&copy; 2026 Mohaimin Hossain Srabon. All Rights Reserved.</p>
+                <p class="attribution">Designed & Developed with <i class="fa-solid fa-heart text-gradient"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Main javascript file -->
+    <script src="script.js"></script>
+</body>
+</html>
